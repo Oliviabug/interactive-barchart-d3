@@ -182,8 +182,6 @@
 
                 tip.html(function(d) { return d.value + '%' });
 
-                //create a hidden div with text and when I mouseover it becomes active
-                // var rect = d3.select()
 
                 svg.append("g")
                     .selectAll("g")
@@ -203,16 +201,6 @@
                       console.log(this);
                       console.log(d);
 
-                      // return text
-                      //         .data(data)
-                      //         .enter()
-                      //         .append('rect')
-                      //         .append('text')
-                      //         .attr('class', 'customized')
-                      //         .text(function(d, i){
-                      //           return 'The ' + d.religion + ' represents ' + d['% of the European population'] + ' % of the European population and spent ' + d[' % of total amount of money spent in lobbying by religious institutions'] + ' % of the total amount of money spent in lobbying by religious institutions or ' + d[' total amount of money spent by religion'] + '€.' ;
-                      //           console.log(d)
-                      //         }).append('br')
 
                     })
                     .on('mouseout', function(d){
