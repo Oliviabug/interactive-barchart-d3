@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.js'> </script>
     <style>
 
@@ -80,7 +80,7 @@
 
     <div class='title'>
 
-      <h1>Which religion is the most powerful lobbyist in the EU?</h1>
+      <h1>Which religion spends the most on lobbying in the European Union?</h1>
 
     </div>
 
@@ -93,7 +93,11 @@
 
       <p>According to the data extracted from the <a href='http://ec.europa.eu/transparencyregister/public/homePage.do'>EU transparency register</a>, 51 religious institutions spent more than 17 million euros on lobbying from 2015 to 2017. </p>
 
+<<<<<<< HEAD
       <p>Christians are by far the biggest spender. Encompassing the Catholic, Orthodox and Protestant, theyr represent 76% of the EU population but spent more than 95% of the total amount of money spent on lobbying by religious institutions </p>
+=======
+      <p class='line'>Christian institutions are by far the biggest spenders. These instiutions include Catholic, Orthodox and Protestant organizations. 76% of the EU identied as Christian, but Christian institutions accounted for more than 95% of lobbying expenditures among all religions.</p>
+>>>>>>> 5848959a6156158aeb87386aef69001dba4e404b
 
     </div>
    </div>
@@ -180,8 +184,6 @@
 
                 tip.html(function(d) { return d.value + '%' });
 
-                //create a hidden div with text and when I mouseover it becomes active
-                // var rect = d3.select()
 
                 svg.append("g")
                     .selectAll("g")
@@ -201,16 +203,6 @@
                       console.log(this);
                       console.log(d);
 
-                      // return text
-                      //         .data(data)
-                      //         .enter()
-                      //         .append('rect')
-                      //         .append('text')
-                      //         .attr('class', 'customized')
-                      //         .text(function(d, i){
-                      //           return 'The ' + d.religion + ' represents ' + d['% of the European population'] + ' % of the European population and spent ' + d[' % of total amount of money spent in lobbying by religious institutions'] + ' % of the total amount of money spent in lobbying by religious institutions or ' + d[' total amount of money spent by religion'] + '€.' ;
-                      //           console.log(d)
-                      //         }).append('br')
 
                     })
                     .on('mouseout', function(d){
